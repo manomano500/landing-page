@@ -1,4 +1,4 @@
-# protofilo
+# lending-page
 
 ## Project setup
 ```

@@ -1,0 +1,27 @@
+/* custom.css */
+/* Common styles for navigation links */
+.nav-link {
+    @apply  space-y-1 text-sm font-semibold py-2 px-4 rounded pb-2 ;
+    font-family: 'Quicksand', serif; /* Replace 'Roboto' with your preferred font */
+}
+
+
+/* Active link indicator */
+.nav-link-active::after {
+    @apply block w-full h-1 bg-white; /* Example line under active link */
+}
+
+/* Hover effect */
+.nav-link:hover::after {
+    @apply block w-full h-1 bg-white; /* Example line under hover effect */
+}
+
+/* Active link text color */
+.nav-link-active {
+    @apply text-cyan-400 underline-offset-4  ; /* Example active link color */
+}
+
+/* Hover text effect */
+.nav-link:hover {
+    @apply text-white underline; /* Example hover effect */
+}
