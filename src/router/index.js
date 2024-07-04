@@ -5,38 +5,36 @@ import CrewView from "@/views/CrewView.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "home",
     component: HomeView,
   },
-  {path: '/destination',
-    name: 'destination',
-    component: () => DestinationView,
+  {
+    path: "/destination",
+    name: "destination",
+    component: DestinationView, // No need for lazy loading here if it's a direct import
   },
-  {path: '/crew',
-  name: 'crew',
-  component: () => CrewView,},
+  {
+    path: "/crew",
+    name: "crew",
+    component: CrewView, // No need for lazy loading here if it's a direct import
+  },
   {
     path: '/',
     component: () => import('../layouts/HomeLayout.vue'),
     children: [
-
-
       {
-
-        path: "/about",
+        path: "about", // No leading slash for nested routes
         name: "about",
         component: () => import("../views/AboutView.vue"),
       },
       {
-        path: "/contact",
+        path: "contact", // No leading slash for nested routes
         name: "contact",
         component: () => import("../views/ContactView.vue"),
-
-      }
-
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 const router = createRouter({
